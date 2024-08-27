@@ -4,17 +4,13 @@ import * as React from "react";
 const EmptyBox: (props) => JSX.Element = (props) => {
   const { id, write, owner, setBox } = props;
 
-  const selectSpace = () => {
-    setBox(id);
-    write();
-  }
-
   return (
     <div>
       {
         owner === '0x0000000000000000000000000000000000000000' ?
           <Button
-            onClick={() => write ? selectSpace() : {}}
+            onMouseOver={setBox(id)}
+            onClick={() => write ? write() : {}}
             variant="contained"
             style={{margin: 'auto'}}
           >
