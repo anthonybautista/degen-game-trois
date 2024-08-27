@@ -9,7 +9,7 @@ const EmptyBox: (props) => JSX.Element = (props) => {
       {
         owner === '0x0000000000000000000000000000000000000000' ?
           <Button
-            onMouseOver={setBox(id)}
+            onMouseOver={() => setBox(id)}
             onClick={() => write ? write() : {}}
             variant="contained"
             style={{margin: 'auto'}}

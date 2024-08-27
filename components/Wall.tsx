@@ -108,7 +108,12 @@ const Wall: (props) => JSX.Element = (props) => {
                       <td key={index + (i * 3)}>
                         {
                           board[index + (i * 3)] === '0x0000000000000000000000000000000000000000' ?
-                            <EmptyBox setBox={setBox} id={index + (i * 3)} write={write} owner={board[index + (i * 3)]}/>
+                            <EmptyBox
+                              setBox={setBox}
+                              id={index + (i * 3)}
+                              write={write}
+                              owner={board[index + (i * 3)]}
+                            />
                             // <img
                             //   width={100}
                             //   height={100}
