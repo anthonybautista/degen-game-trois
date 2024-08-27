@@ -2,14 +2,19 @@ import {Button} from "@mui/material";
 import * as React from "react";
 
 const EmptyBox: (props) => JSX.Element = (props) => {
-  const { id, selectedBox, write, owner } = props;
+  const { id, write, owner, setBox } = props;
+
+  const selectSpace = () => {
+    setBox(id);
+    write();
+  }
 
   return (
     <div>
       {
         owner === '0x0000000000000000000000000000000000000000' ?
           <Button
-            onClick={() => write ? write() : {}}
+            onClick={() => write ? selectSpace() : {}}
             variant="contained"
             style={{margin: 'auto'}}
           >

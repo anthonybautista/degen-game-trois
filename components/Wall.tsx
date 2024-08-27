@@ -105,10 +105,10 @@ const Wall: (props) => JSX.Element = (props) => {
                 <tr key={i}>
                   {
                     row.map((box, index) => (
-                      <td key={index + (i * 3)} onClick={() => setBox(index + (i * 3))}>
+                      <td key={index + (i * 3)}>
                         {
                           board[index + (i * 3)] === '0x0000000000000000000000000000000000000000' ?
-                            <EmptyBox selectedBox={selectedBox} id={index + (i * 3)} write={write} owner={board[index + (i * 3)]}/>
+                            <EmptyBox setBox={setBox} id={index + (i * 3)} write={write} owner={board[index + (i * 3)]}/>
                             // <img
                             //   width={100}
                             //   height={100}
